@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delphis Academy-Nivel 3</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <header id="header">
+        <div class="container__header">
+            <div class="logo">
+                <img src="images/logo-magtimus.png" alt="">
+            </div>
+            <div class="container__nav">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#" class="select">Home</a></li>
+                        <li><a href="#">Examen</a></li>
+                        <li><a href="#">Test</a></li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container__all" id="container_all">
+
+        <div class="cover">
+
+            <div class="container__cover">
+
+                <div class="container__info">
+                    <h1>EMPIEZA EL </h1>
+                    <h2>NIVEL 3</h2>
+                    <p>Empieza ya el nivel 3</p>
+                    <a href="html/1.html"><input type="button" value="Empieza ya"></a>
+                </div>
+                <div class="container__vector">
+                    <!--<img src="img/logo_delphis-removebg-preview-1.png" alt="">-->
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <script>
+            window.onscroll = function() {
+
+                scroll = document.documentElement.scrollTop;
+
+                header = document.getElementById("header");
+
+                if (scroll > 20) {
+                    header.classList.add('nav_mod');
+                } else if (scroll < 20) {
+                    header.classList.remove('nav_mod');
+                }
+
+            }
+
+            document.getElementById("btn_menu").addEventListener("click", mostrar_menu);
+
+            menu = document.getElementById("header");
+            body = document.getElementById("container_all");
+            nav = document.getElementById("nav");
+
+            function mostrar_menu() {
+
+                menu.classList.toggle('move_content');
+                body.classList.toggle('move_content');
+                nav.classList.toggle('move_nav');
+            }
+
+
+            window.addEventListener("resize", function() {
+
+                if (window.innerWidth > 760) {
+                    menu.classList.remove('move_content');
+                    body.classList.remove('move_content');
+                    nav.classList.remove('move_nav');
+                }
+
+            })
+        </script>
+</body>
+
+</html>
